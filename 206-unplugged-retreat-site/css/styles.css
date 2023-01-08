@@ -133,6 +133,10 @@ header nav ul {
   width: 100%;
 }
 
+footer {
+  flex-direction: column;
+}
+
 footer p {
   margin: 0;
 }
@@ -165,7 +169,7 @@ footer .copyright {
 .hero-area {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
 }
 
 /*-----Aside area-----*/
@@ -182,7 +186,6 @@ footer .copyright {
 .features {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
 }
 
@@ -211,6 +214,10 @@ footer .copyright {
   flex-flow: row wrap;
 }
 
+.reviews h2 {
+  margin-bottom: 40px;
+}
+
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
@@ -234,6 +241,10 @@ footer .copyright {
   flex-flow: row wrap;
 }
 
+.contact-content p {
+  margin: 0;
+}
+
 /*============================
 -----FAQ Page-----
 =============================*/
@@ -250,22 +261,16 @@ footer .copyright {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 50px 0 0 0;
 }
 
+.faq h2 {
+  margin-bottom: 40px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.faq-content {
+  margin-bottom: 50px;
+}
 
 /* ==========================================================================
    Helper classes
@@ -371,6 +376,7 @@ footer .copyright {
 
   header .content-wrapper {
     width: 100%;
+    justify-content: space-between;
   }
 
   header nav {
@@ -475,6 +481,10 @@ footer .copyright {
 -----FAQ Page-----
 =============================*/
 
+header {
+  padding: 15px 0;
+}
+
 .faq .content-wrapper {
   justify-content: space-between;
 }
@@ -486,14 +496,61 @@ footer .copyright {
 .faq h2 {
   width: 100%;
 }
-
-
-
 }
 
 @media only screen and (min-width: 1200) {
   /*****Desktop styles*****/
+  .content-wrapper {
+    max-width: 960px;
+  }
+  
+  /* Hero */
+  .hero-area h1 {
+   width: 70%;
+  }
+  
+  /* Aside */
+  aside .content-wrapper {
+   justify-content: space-around;
+  }
+  
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+   width: 45%;
+  }
+  
+  /* Features */
+  .features h2 {
+   width: 90%;
+  }
+  
+  .features article {
+   flex-basis: 33%;
+  }
+  
+  /* Reviews */ 
+  .reviews article div {
+   width: 40%;
+  }
+  
+  /*============================
+  -----About Page-----
+  =============================*/
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+   width: 95%;
+  }
+  
+  /*============================
+  -----FAQ Page-----
+  =============================*/
+  .faq h2 {
+   width: 100%;
+  }
+
 }
+
+
 
 
 
